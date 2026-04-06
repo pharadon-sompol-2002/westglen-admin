@@ -107,7 +107,7 @@ export default function DashboardPage() {
             .select(`id, end_date, customer:customers(full_name), booking_pets(pet:pets(pet_name))`)
             .eq('status', 'checked_in')
             .lt('end_date', today)
-        setOverstays((data as OverstayBooking[]) || [])
+        setOverstays(( data as unknown as OverstayBooking[]) || [])
     }
 
     async function fetchCheckinsToday() {
@@ -117,7 +117,7 @@ export default function DashboardPage() {
             .eq('start_date', today)
             .in('status', ['confirmed', 'pending_confirmation'])
             .order('created_at', { ascending: true })
-        setCheckinsToday((data as UpcomingBooking[]) || [])
+        setCheckinsToday(( data as unknown as UpcomingBooking[]) || [])
     }
 
     async function fetchCheckoutsToday() {
@@ -127,7 +127,7 @@ export default function DashboardPage() {
             .eq('end_date', today)
             .eq('status', 'checked_in')
             .order('created_at', { ascending: true })
-        setCheckoutsToday((data as UpcomingBooking[]) || [])
+        setCheckoutsToday(( data as unknown as UpcomingBooking[]) || [])
     }
 
     async function fetchUpcoming() {
@@ -140,7 +140,7 @@ export default function DashboardPage() {
             .in('status', ['confirmed', 'pending_confirmation'])
             .order('start_date', { ascending: true })
             .limit(8)
-        setUpcoming((data as UpcomingBooking[]) || [])
+        setUpcoming(( data as unknown as UpcomingBooking[]) || [])
     }
 
     async function fetchPendingRequests() {

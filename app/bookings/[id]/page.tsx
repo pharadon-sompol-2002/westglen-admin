@@ -211,7 +211,7 @@ export default function BookingDetailPage() {
       `)
             .eq('id', id)
             .single()
-        setBooking(data as Booking)
+        setBooking( data as unknown as unknown as Booking)
         setLoading(false)
     }
 

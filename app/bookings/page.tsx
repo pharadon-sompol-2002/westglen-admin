@@ -78,7 +78,7 @@ export default function BookingsPage() {
         booking_pets(pet:pets(pet_name))
       `)
             .order('start_date', { ascending: false })
-        setBookings((data as BookingRow[]) || [])
+        setBookings(( data as unknown as unknown as BookingRow[]) || [])
         setLoading(false)
     }
 
