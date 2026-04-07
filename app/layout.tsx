@@ -62,6 +62,7 @@ export default function RootLayout({
         <html lang="en">
         <head>
             <title>Westglen Admin</title>
+            l
         </head>
         <body style={{ background: 'var(--bg)', margin: 0 }}>
         <div style={{ minHeight: '100vh' }}>
