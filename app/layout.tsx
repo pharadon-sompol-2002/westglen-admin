@@ -62,7 +62,7 @@ export default function RootLayout({
         <html lang="en">
         <head>
             <title>Westglen Admin</title>
-            l
+            <link rel="icon" type="image/jpeg" href="/paw-logo.jpeg?v=2" />
         </head>
         <body style={{ background: 'var(--bg)', margin: 0 }}>
         <div style={{ minHeight: '100vh' }}>
